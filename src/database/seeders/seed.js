@@ -81,7 +81,7 @@ async function seedBills(users) {
 }
 
 async function seedVideos() {
-  await mongoose.connect("mongodb+srv://benjaminmolina:jw3qL2mDgOBSjzFw@videos.femp5sa.mongodb.net/?retryWrites=true&w=majority&appName=videos");
+  await mongoose.connect("nop nada aqui no señor lol lmao");
 
   const videos = Array.from({ length: 420 }, () => ({
     title: faker.lorem.words(3),
