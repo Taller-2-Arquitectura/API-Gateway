@@ -1,6 +1,5 @@
 const { config } = require("dotenv");
 const express = require("express");
-const { connect } = require("mongoose");
 const morgan = require("morgan");
 const globalErrorMiddleware = require("./src/middlewares/globalErrorMiddleware");
 const loadClients = require("./grcpClient");
@@ -12,12 +11,12 @@ const interactionRouter = require("./src/routes/interactionRouter");
 
 config({ path: ".env" });
 
-const DB = process.env.MONGO_DATABASE.replace(
-    "<PASSWORD>",
-    process.env.MONGO_PASSWORD
-  ).replace("<USER>", process.env.MONGO_USER);
+// const DB = process.env.MONGO_DATABASE.replace(
+//     "<PASSWORD>",
+//     process.env.MONGO_PASSWORD
+//   ).replace("<USER>", process.env.MONGO_USER);
   
-  connect(DB).then(() => console.log("✓ Conexión a base de datos exitosa"));
+//   connect(DB).then(() => console.log("✓ Conexión a base de datos exitosa"));
 
 const PORT = 3001;
 const enviroment = "Desarrollo";

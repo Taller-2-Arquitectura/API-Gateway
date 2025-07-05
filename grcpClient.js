@@ -26,7 +26,7 @@ const loadClients = (app) => {
     credentials.createInsecure()
   );
   const billsProto = loadProto("bills");
-  app.locals.billsClient = new billsProto.Interactions(
+  app.locals.billsClient = new billsProto.Bills(
    process.env.BILLS_SERVICE_URL,
     credentials.createInsecure()
   );
